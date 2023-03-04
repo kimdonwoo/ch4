@@ -59,6 +59,12 @@ public class BoardController {
 
     }
 
+    @GetMapping("/write")
+    public String write(Model m){
+        m.addAttribute("mode","new");
+
+        return "board"; // board.jsp를 읽기와 쓰기에 사용 , 쓰기일때 mode=new
+    }
 
     @PostMapping("/write")
     public String write(BoardDto boardDto ,Model m, HttpSession session, RedirectAttributes rattr){
@@ -82,13 +88,6 @@ public class BoardController {
             return "board";
         }
 
-    }
-
-    @GetMapping("/write")
-    public String write(Model m){
-        m.addAttribute("mode","new");
-
-        return "board"; // board.jsp를 읽기와 쓰기에 사용 , 쓰기일때 mode=new
     }
 
     //RedirectAttributes : 1회성 모델 , session을 이용

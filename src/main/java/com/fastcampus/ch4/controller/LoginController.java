@@ -46,6 +46,7 @@ public class LoginController {
 
             return "redirect:/login/login?msg="+msg;
         }
+
         // 2-2. id와 pwd가 일치하면,
         //  세션 객체를 얻어오기
         HttpSession session = request.getSession();
@@ -57,6 +58,7 @@ public class LoginController {
             Cookie cookie = new Cookie("id", id); // ctrl+shift+o 자동 import
 //		       2. 응답에 저장
             response.addCookie(cookie);
+
         } else {
             // 1. 쿠키를 삭제
             Cookie cookie = new Cookie("id", id); // ctrl+shift+o 자동 import
@@ -64,7 +66,7 @@ public class LoginController {
 //		       2. 응답에 저장
             response.addCookie(cookie);
         }
-//		       3. 홈으로 이동
+//		       3. 홈으로 이동 (toURL을 통해 이전 화면으로 이동)
         toURL = toURL==null || toURL.equals("") ? "/" : toURL;
 
         return "redirect:"+toURL;

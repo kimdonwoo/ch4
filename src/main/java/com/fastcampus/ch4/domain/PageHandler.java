@@ -12,7 +12,6 @@ public class PageHandler {
     private SearchCondition sc;
 
 
-
     private int totalCnt; // 게시물의 총 갯수
     private int naviSize = 10;
     private int totalPage; // 전체 페이지의 갯수

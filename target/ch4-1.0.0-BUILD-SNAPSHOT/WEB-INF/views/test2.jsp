@@ -214,7 +214,7 @@
     }
 
     .paging-container {
-      width:100%;
+       width:100%;
       height: 70px;
       margin-top: 50px;
       margin : auto;

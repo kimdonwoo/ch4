@@ -69,6 +69,7 @@
     <li><a href=""><i class="fa fa-search"></i></a></li>
   </ul>
 </div>
+
 <form action="<c:url value="/login/login"/>" method="post" onsubmit="return formCheck(this);">
   <h3 id="title">Login</h3>
   <div id="msg">
@@ -82,7 +83,7 @@
   <button>로그인</button>
   <div>
     <label><input type="checkbox" name="rememberId" value="on" ${empty cookie.id.value ? "":"checked"}> 아이디 기억</label> |
-    <a href="">비밀번호 찾기</a> |
+    <a href="">비밀번호 찾기</a>
     <a href="">회원가입</a>
   </div>
   <script>
@@ -98,6 +99,7 @@
       }
       return true;
     }
+
     function setMessage(msg, element){
       document.getElementById("msg").innerHTML = ` ${'${msg}'}`;
       if(element) {
