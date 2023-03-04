@@ -97,8 +97,5 @@ public class CommentController {
             e.printStackTrace();
             return new ResponseEntity<List<CommentDto>>(HttpStatus.BAD_REQUEST); // 400
         }
-
-
     }
-
 }
